@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <form action="action.js" method="POST" name="contact">
+        Name: <input type="text" name="name" placeholder="Type your name here!"/><br>
+        Sex: <input type="radio" value="Man" name="gender" id="genderMan"/><label for="genderMan">Male</label>
+        <input type="radio" value="Female" name="gender"/>Female
+        <input type="radio" value="None" name="gender"/>None<br>
+        Favorite Color: <input type="checkbox" name="color" value="red" checked/>Red
+        <input type="checkbox" name="color" value="blue" />Blue
+        <input type="checkbox" name="color" value="yellow" />Yellow
+        <input type="checkbox" name="color" value="green" />Green<br>
+        Blood Type:<select name="bloodtype">
+            <option value="o">O</option>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="ab">AB</option>
+            <option value="unknown">Unknown</option>
+        </select><br>
+        <textarea name="message" placeholder="Type any message..."></textarea><br>
+        <input type="submit" value="Send!" />
+    </form>
+</body>
+</html>

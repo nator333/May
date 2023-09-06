@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      const jikkanDictionary = "庚・辛・壬・癸・甲・乙・丙・丁・戊・己";
+      const junishiDictionary =
+        "申・酉・戌・亥・子・丑・寅・卯・辰・巳・午・未";
+      function jikkan(year) {
+        const jikkanDictArray = jikkanDictionary.split("・");
+        const remaining = year % 10;
+        return jikkanDictArray[remaining];
+      }
+
+      function juunishi(year) {
+        const junishiDictionaryArray = junishiDictionary.split("・");
+        const remaining = year % 12;
+        return junishiDictionaryArray[remaining];
+      }
+
+      function calculate() {
+        const yearInput = document.getElementById("year").value;
+        document.getElementById("y").textContent = yearInput;
+        document.getElementById("e").textContent =
+          jikkan(yearInput) + juunishi(yearInput);
+      }
+    </script>
+  </head>
+  <body>
+    <h2><span id="y"></span>年の千支は<span id="e"></span></h2>
+    <input id="year" type="number" value="2023" />
+    <button onclick="calculate()">計算</button>
+  </body>
+</html>
+
+<style></style>

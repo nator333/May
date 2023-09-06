@@ -1,0 +1,23 @@
+{
+  "name": "may",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier . --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nator333/May.git"
+  },
+  "author": "Hiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nator333/May/issues"
+  },
+  "homepage": "https://github.com/nator333/May#readme",
+  "devDependencies": {
+    "prettier": "3.0.3"
+  }
+}

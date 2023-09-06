@@ -1,45 +1,45 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <script>
-      function calculateBMI() {
-        const height = document.getElementById('i0').value;
-        const weight = document.getElementById('i1').value;
+    <head>
+        <meta charset="UTF-8" />
+        <script>
+            function calculateBMI() {
+                const height = document.getElementById('i0').value;
+                const weight = document.getElementById('i1').value;
 
-        const bmi = weight / (height * height);
-        console.log(bmi);
+                const bmi = weight / (height * height);
+                console.log(bmi);
 
-        let resultText;
-        if (bmi < 18.5) {
-          resultText = '低体重(痩せ型)';
-        } else if (bmi >= 18.5 && bmi < 25) {
-          resultText = '普通体重';
-        } else if ((bmi >= 25 && bmi < 30) || bmi > 50) {
-          resultText = '肥満(1度)';
-        } else if (bmi >= 30 && bmi < 35) {
-          resultText = '肥満(2度)';
-        } else if (bmi >= 35 && bmi < 40) {
-          resultText = '肥満(3度)';
-        } else if (bmi >= 40) {
-          resultText = '肥満(4度)';
-        }
-        document.getElementById('result').textContent = resultText;
+                let resultText;
+                if (bmi < 18.5) {
+                    resultText = '低体重(痩せ型)';
+                } else if (bmi >= 18.5 && bmi < 25) {
+                    resultText = '普通体重';
+                } else if ((bmi >= 25 && bmi < 30) || bmi > 50) {
+                    resultText = '肥満(1度)';
+                } else if (bmi >= 30 && bmi < 35) {
+                    resultText = '肥満(2度)';
+                } else if (bmi >= 35 && bmi < 40) {
+                    resultText = '肥満(3度)';
+                } else if (bmi >= 40) {
+                    resultText = '肥満(4度)';
+                }
+                document.getElementById('result').textContent = resultText;
 
-        let a = 1;
-        let b = 2;
+                let a = 1;
+                let b = 2;
 
-        a = a * 5;
-        a *= 5;
-      }
-    </script>
-  </head>
-  <body>
-    身長: <input id="i0" type="number" value="1.72" /> 体重:
-    <input id="i1" type="number" value="5" />
-    <button onclick="calculateBMI()">check</button>
-    <p id="result"></p>
-  </body>
+                a = a * 5;
+                a *= 5;
+            }
+        </script>
+    </head>
+    <body>
+        身長: <input id="i0" type="number" value="1.72" /> 体重:
+        <input id="i1" type="number" value="5" />
+        <button onclick="calculateBMI()">check</button>
+        <p id="result"></p>
+    </body>
 </html>
 
 <style></style>

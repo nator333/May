@@ -1,32 +1,32 @@
 div {
-  border: darkseagreen dashed 1px;
-  text-align: center;
-  color: dimgrey;
+    border: darkseagreen dashed 1px;
+    text-align: center;
+    color: dimgrey;
 }
 
 section {
-  border: red dotted 1px;
+    border: red dotted 1px;
 }
 
 /* 1. Idで指定する */
 div#second-div {
-  height: 50px;
-  width: 50px;
+    height: 50px;
+    width: 50px;
 }
 
 /* 2. Classで指定する */
 div.div-class {
-  height: 100px;
-  width: 100px;
+    height: 100px;
+    width: 100px;
 }
 
 /*　3. 擬似クラスで指定する　*/
 div:nth-child(even) {
-  height: 500px;
-  width: 500px;
+    height: 500px;
+    width: 500px;
 }
 
 div:hover {
-  height: 50px;
-  width: 50px;
+    height: 50px;
+    width: 50px;
 }

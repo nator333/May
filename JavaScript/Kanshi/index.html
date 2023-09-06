@@ -1,25 +1,106 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <script>
-      function kaibun() {
-        const sourceValue = document.getElementById('source').value;
+    <head>
+        <meta charset="UTF-8" />
+        <script>
+            function jikkan(year) {
+                const remaining = year % 10;
 
-        let result = '';
-        for (let i = sourceValue.length - 1; i >= 0; i--) {
-          result = result + sourceValue.charAt(i);
-        }
+                let result = '';
+                switch (remaining) {
+                    case 0:
+                        result = '庚';
+                        break;
+                    case 1:
+                        result = '辛';
+                        break;
+                    case 2:
+                        result = '壬';
+                        break;
+                    case 3:
+                        result = '癸';
+                        break;
+                    case 4:
+                        result = '甲';
+                        break;
+                    case 5:
+                        result = '乙';
+                        break;
+                    case 6:
+                        result = '丙';
+                        break;
+                    case 7:
+                        result = '丁';
+                        break;
+                    case 8:
+                        result = '戊';
+                        break;
+                    case 9:
+                        result = '己';
+                        break;
+                }
 
-        document.getElementById('result').textContent = result;
-      }
-    </script>
-  </head>
-  <body>
-    <input id="source" type="text" value="おはよう" />
-    <button onclick="kaibun()">回文</button>
-    <p id="result"></p>
-  </body>
+                return result;
+            }
+
+            function juunishi(year) {
+                const remaining = year % 12;
+                let result = '';
+                switch (remaining) {
+                    case 0:
+                        result = '申';
+                        break;
+                    case 1:
+                        result = '酉';
+                        break;
+                    case 2:
+                        result = '戌';
+                        break;
+                    case 3:
+                        result = '亥';
+                        break;
+                    case 4:
+                        result = '子';
+                        break;
+                    case 5:
+                        result = '丑';
+                        break;
+                    case 6:
+                        result = '寅';
+                        break;
+                    case 7:
+                        result = '卯';
+                        break;
+                    case 8:
+                        result = '辰';
+                        break;
+                    case 9:
+                        result = '巳';
+                        break;
+                    case 10:
+                        result = '午';
+                        break;
+                    case 11:
+                        result = '未';
+                        break;
+                }
+
+                return result;
+            }
+
+            function calculate() {
+                const yearInput = document.getElementById('year').value;
+                document.getElementById('y').textContent = yearInput;
+                document.getElementById('e').textContent =
+                    jikkan(yearInput) + juunishi(yearInput);
+            }
+        </script>
+    </head>
+    <body>
+        <h2><span id="y"></span>年の千支は<span id="e"></span></h2>
+        <input id="year" type="number" value="2023" />
+        <button onclick="calculate()">計算</button>
+    </body>
 </html>
 
 <style></style>

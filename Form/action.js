@@ -1,4 +1,4 @@
-const name = "May!";
+const name = 'May!';
 
 const main = () => name;
 

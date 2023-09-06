@@ -3,25 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <script>
-      const jikkanDictionary = "庚・辛・壬・癸・甲・乙・丙・丁・戊・己";
+      const jikkanDictionary = '庚・辛・壬・癸・甲・乙・丙・丁・戊・己';
       const junishiDictionary =
-        "申・酉・戌・亥・子・丑・寅・卯・辰・巳・午・未";
+        '申・酉・戌・亥・子・丑・寅・卯・辰・巳・午・未';
       function jikkan(year) {
-        const jikkanDictArray = jikkanDictionary.split("・");
+        const jikkanDictArray = jikkanDictionary.split('・');
         const remaining = year % 10;
         return jikkanDictArray[remaining];
       }
 
       function juunishi(year) {
-        const junishiDictionaryArray = junishiDictionary.split("・");
+        const junishiDictionaryArray = junishiDictionary.split('・');
         const remaining = year % 12;
         return junishiDictionaryArray[remaining];
       }
 
       function calculate() {
-        const yearInput = document.getElementById("year").value;
-        document.getElementById("y").textContent = yearInput;
-        document.getElementById("e").textContent =
+        const yearInput = document.getElementById('year').value;
+        document.getElementById('y').textContent = yearInput;
+        document.getElementById('e').textContent =
           jikkan(yearInput) + juunishi(yearInput);
       }
     </script>

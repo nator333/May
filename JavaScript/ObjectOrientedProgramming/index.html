@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Car</title>
+        <script>
+            const car = {
+                speedInKm: 80,
+                gasRemaining: 95,
+            };
+
+            function displayCarProps() {
+                document.getElementById('speed').textContent =
+                    car.speedInKm + ' km';
+                document.getElementById('gas').textContent =
+                    car.gasRemaining + ' %';
+            }
+
+            function reset() {
+                document.getElementById('speed').textContent = '';
+                document.getElementById('gas').textContent = '';
+                console.log('hh');
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="displayCarProps()">Show</button>
+        <button onclick="reset()">Reset</button>
+        <p>Speed: <span id="speed"></span></p>
+        <p>Gas Remaining: <span id="gas"></span></p>
+    </body>
+</html>
